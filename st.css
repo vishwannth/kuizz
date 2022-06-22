@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: flex;
+}
+#menu{
+    background-color:#111827;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#menu .logo{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 30px 0 0 30px;
+}
+#menu .logo img{
+    width: 60px;
+    margin-right: 15px;
+}
+#menu .items{
+     margin-top: 40px;;
+}
+#menu .items li{
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+}
+#menu .items li:hover{
+    background: #253047;
+    cursor: pointer;
+}
+#menu .items li:nth-child(1){
+    border-left: 4px solid #fff;
+}
+#menu .items li i{
+    color: rgb(134, 141, 151);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 10px 0 25px;
+}
+#menu .items li:hover i,
+#menu .items li:hover a{
+    color: #f3f4f6;
+}
+#menu .items li a{
+    text-decoration: none;
+    color: rgb(134, 141, 151);
+    font-weight: 300px;
+    transition: 0.3s ease;
+}
+#interface{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #594ef7;
+    position: fixed;
+    width: calc(100% - 300px);
+}
+#interface .navigation .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+
+}
+#interface .navigation .search i{
+    margin-right: 14px;
+}
+#interface .navigation .search input{
+    border: none;
+    outline: none;
+    font-size: 14;
+}
+#interface .navigation .profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#interface .navigation .profile i{
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+#interface .navigation .profile img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    }
+.n1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu-btn{
+    display: none;
+    color: #2b2b2b;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.board{
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.board img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.board h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #787d8d;
+}
+.board .people{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+table{
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+tr{
+    border-bottom: 1px solid #eef0f3;
+}
+thead td{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f9fafb;
+    text-align: start;
+    padding: 15px;
+}
+tbody tr td{
+    padding: 10px 15px;
+}
+.active p{
+    background: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 14px;
+    color: #2b2b2b;
+}
+.active1 p{
+    background: yellow;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 14px;
+    color: #2b2b2b;
+}
+.edit a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #554cd1;
+    font-weight: 600;
+}
+@media (max-width:769px) {
+   #menu{
+    width: 270px;
+    position: fixed;
+    left: -270px;
+    transition: 0.3s ease;
+   }
+   #menu.active{
+       left:0px;
+   }
+   #menu-btn{
+       display: initial;
+   }
+   #interface{
+       width: 100%;
+       margin-left: 0px;
+       display: inline-block;
+       transition: 0.3s ease;
+   }
+   #menu.active~#interface{
+       width: calc(100%-270px);
+       margin-left: 270px;
+       transition: 0.3s ease;
+   }
+   #interface .navigation{
+       width: 100%;
+   }
+   .board{
+       width: 92%;
+       padding: 0;
+       overflow-x: auto;
+   }
+   table{
+       width: 100%;
+       border-collapse: collapse;
+   }
+}
+h2{
+    position: absolute;
+    top: 400px;
+    left: 50px;
+}
+#l3{
+    position: absolute;
+    top: 450px;
+    left: 500px;
+}
+#l1{
+    position: absolute;
+    top: 450px;
+    left: 700px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+#l1:hover{
+    background-color: #787d8d;
+}
+
+#l9{
+    position: absolute;
+    top: 450px;
+    left: 775px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+#l9:hover{
+    background-color: #787d8d;
+}
+
+#l10{
+    position: absolute;
+    top: 450px;
+    left: 845px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+#l10:hover{
+    background-color: #787d8d;
+}
+#l4{
+    position: absolute;
+    top: 550px;
+    left: 500px;
+}
+#l2{
+    position: absolute;
+    top: 550px;
+    left: 700px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: lightslategray;
+}
+#l7{
+    position: absolute;
+    top: 600px;
+    left: 700px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: lightslategray;
+}
+#l8{
+    position: absolute;
+    top: 650px;
+    left: 700px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: lightslategray;
+}
+#l5{
+    height: 300px;
+    position: absolute;
+    top: 370px;
+    left: 900px;
+}
+@media (max-width:477px){
+    #interference .navigation {
+        padding: 15px;
+    }
+    #interface .navigation .search input {
+        width: 150px;
+    }
+}
