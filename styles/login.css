@@ -1,28 +1,26 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  background: url(bg4.jpeg);
+  background: url(assets/bg4.jpeg);
   background-size: 100%;
   font-family: sans-serif;
-
 }
-.loginimg{
+.loginimg {
   height: 100px;
   width: 100px;
-  border-radius:50%;
-  margin-top: 22px;
+  border-radius: 50%;
+  margin-top: 0px;
   position: relative;
   left: calc(50% - 50px);
-
 }
 
-.loginbox{
-  background: url(bg4.png);
-  color: #1E5128;
+.loginbox {
+  background: url(assets/bg4.png);
+  color: #1e5128;
   top: 50%;
   left: 50%;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 50px 30px;
   opacity: 0.7;
@@ -30,32 +28,30 @@ body{
   max-height: 420px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow: hidden;
   column-gap: 10px;
-  scroll-behavior: smooth;
-
-
 }
 
-h1{
+h1 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
 }
 
-.loginbox input{
+.loginbox input {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.loginbox p{
+.loginbox p {
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
 
-.loginbox input[type="text"],input[type="password"]{
+.loginbox input[type="text"],
+input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -64,37 +60,34 @@ h1{
   font-size: 16px;
   color: white;
 }
-.loginbox input[type="submit"]
-{
+.loginbox input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
-  background: #fb2525
-  color:#fff;
+  background: #fb2525;
+  color: #fff;
   font-size: 18px;
   border-radius: 20px;
 }
 
-.loginbox input[type="submit"]:hover
-{
-  cursor:pointer;
+.loginbox input[type="submit"]:hover {
+  cursor: pointer;
   background: #ffc107;
   color: #000;
   align-items: center;
   border-radius: 20px;
 }
-.loginbox a{
+.loginbox a {
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
   color: black;
 }
 
-a:hover{
-  color:#2F8F9D;
+a:hover {
+  color: #2f8f9d;
 }
-#lo{
+#lo {
   color: #382933;
-  text-align:center;
-
+  text-align: center;
 }
