@@ -2,29 +2,84 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>QUIZZ--LOGIN PAGE</title>
+    <title>SIGN UP</title>
     <link rel="stylesheet" href="styles/signup.css" />
+    <link rel="icon" type="image/x-icon" href="assets/fav.png">
   </head>
   <body>
+    <img src="assets/login2.png" alt="login" class="loginimg" />
     <div class="loginbox">
+     
       <h3 id="lo">REGISTER</h3>
       <form class="loginform" action="index.html" method="post">
-        <p>Name</p>
-        <input type="text" name="" placeholder="Name" />
-        <p>Date Of Birth</p>
-        <input type="date" name="" placeholder="Date Of Birth" />
-        <p>Email</p>
-        <input type="text" name="" placeholder="Email" />
-        <p>Phone number</p>
-        <input type="text" name="" placeholder="Phone number" />
-        <p>Password</p>
-        <input type="password" name="" placeholder="Password" />
-        <p>Re-enter Password</p>
-        <input type="password" name="" placeholder="Re-enter Password" />
-        <input type="submit" name="" value="REGISTER" onclick="action" />
+        <label>Email</label>
+        <input type="text" id="email" name="" placeholder="Email" required/>
+        <label>Password</label>
+        <input type="password" id="psw" name="psw" placeholder="Password" />
+        <button type="button" id="submitdata" name="submitdata" class="registerbtn" >REGISTER</button><br>
         <a href="login.html">Already have an account ! ! Click here</a><br />
       </form>
     </div>
-    <img src="assets/login2.png" alt="login" class="loginimg" />
+    
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+      import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
+      import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCJfhm9Dyl5aKNr99hbM5c4PmWhGMzEac8",
+        authDomain: "prac-auth-57bdf.firebaseapp.com",
+        projectId: "prac-auth-57bdf",
+        storageBucket: "prac-auth-57bdf.appspot.com",
+        messagingSenderId: "1011858008749",
+        appId: "1:1011858008749:web:3d7ec452d3ece9e6b3f424"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const database = getDatabase(app);
+
+
+      submitdata.addEventListener('click',(e) => {
+          
+          var email=document.getElementById('email').value;
+          var password=document.getElementById('psw').value;
+
+          createUserWithEmailAndPassword(auth, email, password)
+.then((userCredential) => {
+  // Signed in 
+  const user = userCredential.user;
+  // ...user.uid
+  set(ref(database, 'users/' + user.uid), {
+      email: email,
+      password: password
+  
+})
+  .then(() => {
+// Data saved successfully!
+alert('user created sucessfully');
+location.href="login.html";
+})
+.catch((error) => {
+// The write failed...
+alert(error); 
+});
+  
+})
+.catch((error) => {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+  // ..
+  alert(errorMessage);
+});
+      })
+    </script>
+
+
   </body>
 </html>

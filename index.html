@@ -1,62 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuiz Board App</title>
-    <link rel="icon" type="image/x-icon" href="assets/t4.png">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="h4">
-      <div class="left_area">
-        <h3>KUIZ <span><!----></span></h3>
-      </div>
-      <div class="right_area">
-        <a href="#" class="logout_btn">Logout</a>
-        <a id="j1" href="contact.html"><i class="fas fa-info-circle"></i><span> Need Help?</span></a>
-      </div>
-      </div>
-      <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-    <div class="side-bar">
-      <div class="close-btn">
-        <i class="fas fa-times"></i>
-      </div>
-      <div class="menu">
-        <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
-        <div class="item">
-          <a class="sub-btn"><i class="fas fa-table"></i>Topics<i class="fas fa-angle-right dropdown"></i></a>
-          <div class="sub-menu">
-            <a href="#" class="sub-item">General Knowledge</a>
-            <a href="#" class="sub-item">Sports</a>
-            <a href="#" class="sub-item">Movies</a>
-            <a href="#" class="sub-item">Science & Nature</a>
-            <a href="#" class="sub-item">Celebrities</a>
-            <a href="#" class="sub-item">Vehicles</a>
-          </div>
-        </div>
+    <title>HOME</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/fav.png" >
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="assets/KUIZZ.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>  
 
-     <!--  <div class="item"><a href="#"><i class="fas fa-th"></i>Forms</a></div>
-        <div class="item">
-          <a class="sub-btn"><i class="fas fa-cogs"></i>Settings<i class="fas fa-angle-right dropdown"></i></a>
-          <div class="sub-menu">
-            <a href="#" class="sub-item">Sub Item 01</a>
-            <a href="#" class="sub-item">Sub Item 02</a>
-          </div>
+        <div class="content">
+            <h1>K U I Z Z</h1>
+            <br>
+            <pre>We love quizzes. We’re always up for learning new things about ourselves. Whether it’s the latest on Sports,Movies
+                science or some crazy fact, we’re game to test our knowledge</pre>
+                <br>
+            <p>Take this Kuiz to find out</p>
+            <div>
+                <button type="button" onclick="next()"><span></span>GET STARTED</button>
+            </div>
         </div>
-        <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
-      </div>
     </div>
-    <section class="main">
-      <h1>Sidebar Menu With<br>Sub-Menus</h1>
-    </section>-->
-
-    <script src="D:\web developement\mini project\scripts\script.js">
+    <script>
+        function next(){
+            location.href="login.html";
+        }
     </script>
-
-  </body>
+</body>
 </html>
