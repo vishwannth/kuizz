@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(assets/bg4.jpeg);
+  background: url(../assets/bg5.jpeg);
   background-size: 100%;
   font-family: sans-serif;
 }
@@ -12,10 +12,11 @@ body {
   margin-top: 22px;
   position: relative;
   left: calc(50% - 50px);
+  z-index: 2;
 }
 
 .loginbox {
-  background: url(assets/bg4.png);
+  background: url(../assets/bg4.png);
   color: #1e5128;
   top: 50%;
   left: 50%;
@@ -28,7 +29,7 @@ body {
   max-height: 420px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: hidden;
   column-gap: 10px;
   scroll-behavior: smooth;
 }
@@ -61,7 +62,7 @@ input[type="password"] {
   font-size: 16px;
   color: white;
 }
-.loginbox input[type="submit"] {
+.loginbox button {
   border: none;
   outline: none;
   height: 40px;
@@ -69,9 +70,12 @@ input[type="password"] {
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
+  align-items: center;
+  padding-right: 30%;
+  padding-left: 30%;
 }
 
-.loginbox input[type="submit"]:hover {
+.loginbox button:hover {
   cursor: pointer;
   background: #ffc107;
   color: #000;

@@ -9,14 +9,16 @@
 
 body {
   min-height: 100vh;
-  background: url(background.png) no-repeat;
+  background: url(../assets/background.png) no-repeat 100%;
   background-size: cover;
   background-position: center;
+
 }
 .h4 {
   background: #22242a;
   padding: 20px;
 }
+
 
 .left_area h3 {
   color: #fff;
@@ -106,6 +108,7 @@ body {
   display: none;
 }
 
+
 .side-bar .menu .item .sub-menu a {
   padding-left: 80px;
 }
@@ -154,10 +157,12 @@ body {
     line-height: 60px;
   }
 }
+
+
 #j1 {
   position: absolute;
-  top: 700px;
-  left: 1400px;
+  top: 60px;
+  right: 30px;
   font-size: medium;
   padding: 5px;
   /*background: rgb(62, 59, 59);*/
@@ -173,3 +178,13 @@ body {
 #j1:hover {
   background: dimgray;
 }
+
+.content{
+  position: relative;
+   left: 23%;
+  width: 75%;
+  height: 480px;
+
+
+}
+
